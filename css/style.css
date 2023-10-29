@@ -131,6 +131,7 @@ input::placeholder {
 .stories .statistic input:disabled {
   color: black !important;
   background-color: transparent !important;
+  -webkit-text-fill-color: black;
 }
 
 .stories .statistic .instbold {
