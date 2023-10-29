@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Carousel</title>
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" href="css/style.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body class="stories">
+    <div id="slider1">
+        <header>
+            <a href="./index.html">
+                <svg aria-label="Параметри" class="x1lliihq x1n2onr6 x5n08af" fill="currentColor" height="24" role="img"
+                    viewBox="0 0 24 24" width="24">
+                    <title>Параметри</title>
+                    <circle cx="12" cy="12" fill="none" r="8.635" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2"></circle>
+                    <path
+                        d="M14.232 3.656a1.269 1.269 0 0 1-.796-.66L12.93 2h-1.86l-.505.996a1.269 1.269 0 0 1-.796.66m-.001 16.688a1.269 1.269 0 0 1 .796.66l.505.996h1.862l.505-.996a1.269 1.269 0 0 1 .796-.66M3.656 9.768a1.269 1.269 0 0 1-.66.796L2 11.07v1.862l.996.505a1.269 1.269 0 0 1 .66.796m16.688-.001a1.269 1.269 0 0 1 .66-.796L22 12.93v-1.86l-.996-.505a1.269 1.269 0 0 1-.66-.796M7.678 4.522a1.269 1.269 0 0 1-1.03.096l-1.06-.348L4.27 5.587l.348 1.062a1.269 1.269 0 0 1-.096 1.03m11.8 11.799a1.269 1.269 0 0 1 1.03-.096l1.06.348 1.318-1.317-.348-1.062a1.269 1.269 0 0 1 .096-1.03m-14.956.001a1.269 1.269 0 0 1 .096 1.03l-.348 1.06 1.317 1.318 1.062-.348a1.269 1.269 0 0 1 1.03.096m11.799-11.8a1.269 1.269 0 0 1-.096-1.03l.348-1.06-1.317-1.318-1.062.348a1.269 1.269 0 0 1-1.03-.096"
+                        fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2"></path>
+                </svg>
+            </a>
+            <svg id="addSlide" aria-label="Закрити" class="x1lliihq x1n2onr6 x5n08af" fill="currentColor" height="24"
+                role="img" viewBox="0 0 24 24" width="24">
+                <title>Закрити</title>
+                <line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    x1="21" x2="3" y1="3" y2="21"></line>
+                <line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    x1="21" x2="3" y1="21" y2="3"></line>
+            </svg>
+        </header>
+        <div class="slider">
+
+        </div>
+    </div>
+    <div class="statistic">
+        <div class="btns">
+            <div>
+                <img id="save" src="img/chart.jpg" alt="" style="width: 25px;height: 25px;">
+                <img src="img/eay.png" alt="" style="width: 20px;height: 20px;">
+                <input id="views" type="number" class="instbold" placeholder="--">
+            </div>
+            <img src="img/trash.png" alt="" style="width: 20px;height: 20px;">
+        </div>
+        <div class="review">
+            <div class="head">
+                <span class="instbold">Обзор</span>
+                <svg aria-label="Інформація" class="x1lliihq x1n2onr6 x5n08af" fill="currentColor" height="16"
+                    role="img" viewBox="0 0 24 24" width="16">
+                    <title>Інформація</title>
+                    <circle cx="12.001" cy="12.005" fill="none" r="10.5" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2"></circle>
+                    <circle cx="11.819" cy="7.709" r="1.25"></circle>
+                    <line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="2" x1="10.569" x2="13.432" y1="16.777" y2="16.777"></line>
+                    <polyline fill="none" points="10.569 11.05 12 11.05 12 16.777" stroke="currentColor"
+                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polyline>
+                </svg>
+            </div>
+            <div>
+                <p>Охваченные аккаунты</p>
+                <input id="accountsCovered" disabled type="number" class="instbold" placeholder="--">
+            </div>
+            <div>
+                <p>Вовлеченые аккаунты</p>
+                <input id="accountsInvolved" disabled type="number" class="instbold" placeholder="--">
+            </div>
+            <div>
+                <p>Действия в профиле</p>
+                <input id="profileActions" type="number" class="instbold" placeholder="--">
+            </div>
+        </div>
+        <div class="coverage">
+            <div class="head">
+                <span class="instbold">Охват</span>
+                <svg aria-label="Інформація" class="x1lliihq x1n2onr6 x5n08af" fill="currentColor" height="16"
+                    role="img" viewBox="0 0 24 24" width="16">
+                    <title>Інформація</title>
+                    <circle cx="12.001" cy="12.005" fill="none" r="10.5" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2"></circle>
+                    <circle cx="11.819" cy="7.709" r="1.25"></circle>
+                    <line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="2" x1="10.569" x2="13.432" y1="16.777" y2="16.777"></line>
+                    <polyline fill="none" points="10.569 11.05 12 11.05 12 16.777" stroke="currentColor"
+                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polyline>
+                </svg>
+            </div>
+            <div class="chart-container">
+                <div class="centered-text">
+                    <input type="number" class="instbold" disabled id="accountsCovered1" disabled placeholder="--">
+                    <span>Охваченные аккаунты</span>
+                </div>
+                <div class="bottom-row">
+                    <div class="justend">
+                        <input type="number" class="instbold" id="accountsCoveredSubscriber" placeholder="--">
+                        <div class="dot-container"><span>Подписчики</span>
+                            <div class="dot blue"></div>
+                        </div>
+                    </div>
+                    <div class="chart">
+                        <div id="container">
+                            <div>
+                                <canvas id="myChart" width="60" height="60"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="juststart">
+                        <input type="number" class="instbold" id="accountsCoveredNonsubscriber" placeholder="--">
+                        <div class="dot-container">
+                            <div class="dot darkblue"></div><span>Не подписчики</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="shows">
+            <p class="instbold" style="font-size: 24px;">Показы</p>
+            <input type="number" class="instbold" id="shows" placeholder="--" style="font-size: 22px;">
+        </div>
+        <div class="involvement">
+            <div class="head">
+                <span class="instbold">Вовлеченность</span>
+                <svg aria-label="Інформація" class="x1lliihq x1n2onr6 x5n08af" fill="currentColor" height="16"
+                    role="img" viewBox="0 0 24 24" width="16">
+                    <title>Інформація</title>
+                    <circle cx="12.001" cy="12.005" fill="none" r="10.5" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2"></circle>
+                    <circle cx="11.819" cy="7.709" r="1.25"></circle>
+                    <line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="2" x1="10.569" x2="13.432" y1="16.777" y2="16.777"></line>
+                    <polyline fill="none" points="10.569 11.05 12 11.05 12 16.777" stroke="currentColor"
+                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polyline>
+                </svg>
+            </div>
+            <div class="chart-container">
+                <div class="centered-text">
+                    <input type="number" class="instbold" id="accountsInvolved1" placeholder="--" disabled>
+                    <span>Вовлеченные аккаунты</span>
+                </div>
+                <div class="bottom-row">
+                    <div class="justend">
+                        <input type="number" class="instbold" id="accountsInvolvedSubscriber" placeholder="--">
+                        <div class="dot-container"><span>Подписчики</span>
+                            <div class="dot blue"></div>
+                        </div>
+                    </div>
+                    <div class="chart">
+                        <div id="container">
+                            <div>
+                                <canvas id="myChart1" width="60" height="60"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="juststart">
+                        <input type="number" class="instbold" id="accountsInvolvedNonsubscriber" placeholder="--">
+                        <div class="dot-container">
+                            <div class="dot darkblue"></div><span>Не подписчики</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="interaction">
+            <div class="head">
+                <span class="instbold" style="font-size: 20px;">Взаимодействия с историей</span>
+                <input type="number" id="interactionsHistory" class="instbold" placeholder="--"
+                    style="font-size: 22px;">
+            </div>
+            <div>
+                <p>Отметки "Нравится"</p>
+                <input id="likes" type="number" class="instbold" placeholder="--">
+            </div>
+            <div>
+                <p>Ответы</p>
+                <input id="answers" type="number" class="instbold" placeholder="--">
+            </div>
+            <div>
+                <p>Репосты</p>
+                <input id="reposts" type="number" class="instbold" placeholder="--">
+            </div>
+        </div>
+        <div class="stickers">
+            <div>
+                <p class="instbold" style="font-size: 24px;">Нажатия на стикеры</p>
+                <input id="clickStickers" type="number" class="instbold" placeholder="--">
+            </div>
+            <div>
+                <input id="email" type="text" placeholder="@herbal_craft" style="font-size: 16px;">
+                <input id="emailValue" type="number" placeholder="--" style="font-size: 16px;">
+            </div>
+        </div>
+        <div class="interaction">
+            <div class="head">
+                <span class="instbold" style="font-size: 22px;">Навигация</span>
+                <input id="navigation" type="number" class="instbold" placeholder="--" style="font-size: 22px;">
+            </div>
+            <div>
+                <p>Вперед</p>
+                <input id="forward" type="number" class="instbold" placeholder="--">
+            </div>
+            <div>
+                <p>Назад</p>
+                <input id="back" type="number" class="instbold" placeholder="--">
+            </div>
+            <div>
+                <p>Выходы</p>
+                <input id="exits" type="number" class="instbold" placeholder="--">
+            </div>
+            <div>
+                <p>Следующая история</p>
+                <input id="nextStory" type="number" class="instbold" placeholder="--">
+            </div>
+        </div>
+        <div class="interaction rows3">
+            <div class="head">
+                <div><span class="instbold" style="font-size: 22px;">Действия в профиле</span><svg
+                        aria-label="Інформація" class="x1lliihq x1n2onr6 x5n08af" fill="currentColor" height="16"
+                        role="img" viewBox="0 0 24 24" width="16">
+                        <title>Інформація</title>
+                        <circle cx="12.001" cy="12.005" fill="none" r="10.5" stroke="currentColor"
+                            stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></circle>
+                        <circle cx="11.819" cy="7.709" r="1.25"></circle>
+                        <line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2" x1="10.569" x2="13.432" y1="16.777" y2="16.777"></line>
+                        <polyline fill="none" points="10.569 11.05 12 11.05 12 16.777" stroke="currentColor"
+                            stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polyline>
+                    </svg></div>
+                <input type="number" class="instbold" disabled id="profileActions1" placeholder="--"
+                    style="font-size: 22px;">
+            </div>
+            <div>
+                <p>Посещение профиля</p>
+                <input id="visitProfile" type="number" class="instbold" placeholder="--">
+            </div>
+            <div>
+                <p>Подписки</p>
+                <input id="subscriptions" type="number" class="instbold" placeholder="--">
+            </div>
+        </div>
+    </div>
+    <input type="file" accept="image/*" id="fileInput" style="display: none; " multiple>
+    <script>
+        let tamplateStatistic = {
+            id: null,
+            views: '',
+            views1: '',
+            accountsCovered: '',
+            accountsInvolved: '',
+            accountsCoveredSubscriber: '',
+            accountsCoveredNonsubscriber: '',
+            accountsInvolvedNonsubscriber: '',
+            accountsInvolvedSubscriber: '',
+            profileActions: '',
+            shows: '',
+            interactionsHistory: '',
+            likes: '',
+            answers: '',
+            reposts: '',
+            clickStickers: '',
+            email: '',
+            emailValue: '',
+            navigation: '',
+            forward: '',
+            back: '',
+            exits: '',
+            nextStory: '',
+            visitProfile: '',
+            subscriptions: '',
+        };
+        let statistic = [];
+        $(document).ready(function () {
+            initCarousel();
+        });
+
+        const addSlide = document.getElementById("addSlide");
+        addSlide.addEventListener("click", function () { document.getElementById("fileInput").click(); });
+        document.getElementById("fileInput").addEventListener("change", function () {
+            const files = this.files;
+            for (let i = 0; i < files.length; i++) {
+                const file = files[i];
+                if (file.type.startsWith("image/")) {
+                    const reader = new FileReader();
+                    reader.onload = function (e) {
+                        const div = document.createElement('div');
+                        const img = document.createElement('img');
+                        const imgInput = document.createElement('img');
+                        const divInput = document.createElement('div');
+                        const input = document.createElement('input');
+                        div.classList.add('slide');
+                        div.id = Date.now();
+                        const newStatisticItem = { ...tamplateStatistic, id: div.id };
+                        statistic.push(newStatisticItem);
+                        img.src = e.target.result;
+                        imgInput.src = 'img/eayWhite.png';
+                        imgInput.style = 'height:10px;width:10px;';
+                        input.classList.add('likesInput')
+                        input.id = 'views' + div.id;
+                        input.addEventListener('input', function () {
+                            const inputText = input.value;
+                            const inputLength = inputText.length;
+                            const maxInputWidth = 40;
+                            const inputWidth = Math.min(inputLength * 8, maxInputWidth);
+                            input.style.width = inputWidth + 'px';
+                        });
+                        divInput.classList.add('likes')
+                        input.type = 'number';
+                        input.placeholder = '--';
+                        divInput.appendChild(imgInput);
+                        divInput.appendChild(input);
+                        div.appendChild(img);
+                        div.appendChild(divInput);
+                        $('.slider').slick('slickAdd', div)
+                    };
+                    reader.readAsDataURL(file);
+                }
+            }
+        });
+        function initCarousel() {
+            var $slider = $('.slider');
+            $slider.slick({
+                slidesToShow: 5,
+                focusOnSelect: true,
+                infinite: false,
+                responsive: [
+                    {
+                        breakpoint: 844,
+                        settings: {
+                            arrows: false,
+                            centerMode: true,
+                            centerPadding: '10px',
+                            slidesToShow: 5,
+                            variableWidth: true,
+                        }
+                    }
+                ],
+                onInit: function () {
+                    loadStatistic();
+                }
+            });
+            $slider.on('afterChange', function (event, slick, direction) {
+                loadStatistic();
+            });
+        }
+        let chart;
+        let chart1
+        function createAndInitChart(canvasId, subscriberInputId, nonsubscriberInputId, accountsInputId) {
+            const ctx = document.getElementById(canvasId).getContext('2d');
+            const subscriberInput = document.getElementById(subscriberInputId);
+            const nonsubscriberInput = document.getElementById(nonsubscriberInputId);
+            const accountsInput = document.getElementById(accountsInputId);
+            const accountsInput1 = document.getElementById(accountsInputId + '1');
+            function getDataFromInputs() {
+                return [
+                    Number(nonsubscriberInput.value) || 0,
+                    Number(subscriberInput.value) || 1
+                ];
+            }
+            const data = {
+                datasets: [{
+                    data: getDataFromInputs(),
+                    backgroundColor: ['rgb(0, 55, 107)','rgb(0, 149, 246)'],
+                    borderColor: ['#ffffff', '#ffffff'],
+                    borderWidth: 1
+                }],
+            };
+            const config = {
+                type: 'doughnut',
+                data: data,
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    cutout: '70%',
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    }
+                }
+            };
+            if (canvasId === 'myChart') {
+                chart = new Chart(ctx, config);
+                subscriberInput.addEventListener('input', function () { updateChart(chart, subscriberInput, nonsubscriberInput, accountsInput, accountsInput1) });
+                nonsubscriberInput.addEventListener('input', function () { updateChart(chart, subscriberInput, nonsubscriberInput, accountsInput, accountsInput1) });
+            }
+            else if (canvasId === 'myChart1') {
+                chart1 = new Chart(ctx, config);
+                subscriberInput.addEventListener('input', function () { updateChart(chart1, subscriberInput, nonsubscriberInput, accountsInput, accountsInput1) });
+                nonsubscriberInput.addEventListener('input', function () { updateChart(chart1, subscriberInput, nonsubscriberInput, accountsInput, accountsInput1) });
+            }
+        }
+        function updateChart(myChart, subscriberInput, nonsubscriberInput, accountsInput, accountsInput1) {
+            function getDataFromInputs() {
+                return [
+                    Number(nonsubscriberInput.value) || 0,
+                    Number(subscriberInput.value) || 1
+                ];
+            }
+
+            myChart.data.datasets[0].data = getDataFromInputs();
+            myChart.update();
+
+            if (subscriberInput.value && nonsubscriberInput.value) {
+                accountsInput.value = Number(subscriberInput.value) + Number(nonsubscriberInput.value);
+                accountsInput1.value = Number(subscriberInput.value) + Number(nonsubscriberInput.value);
+            }
+        }
+        createAndInitChart('myChart', 'accountsCoveredSubscriber', 'accountsCoveredNonsubscriber', "accountsCovered");
+        createAndInitChart('myChart1', 'accountsInvolvedSubscriber', 'accountsInvolvedNonsubscriber', "accountsInvolved");
+        document.getElementById('profileActions').addEventListener('input', () => {
+            document.getElementById('profileActions1').value = document.getElementById('profileActions').value;
+        })
+        document.getElementById('views').addEventListener('input', () => {
+            const id = 'views' + document.querySelector('.slick-current').id;
+            document.getElementById(id).value = document.getElementById('views').value;
+            document.getElementById(id).dispatchEvent(new Event('input', { bubbles: true, cancelable: true }));
+        })
+        document.getElementById('save').addEventListener('click', () => {
+            const curSlideId = document.querySelector('.slick-current').id
+            const indexToUpdate = statistic.findIndex(item => item.id === curSlideId);
+            if (indexToUpdate !== -1) {
+                statistic[indexToUpdate].views = document.getElementById('views').value;
+                statistic[indexToUpdate].views1 = document.getElementById('views' + statistic[indexToUpdate].id).value;
+                statistic[indexToUpdate].accountsCovered = document.getElementById('accountsCovered').value;
+                statistic[indexToUpdate].accountsInvolved = document.getElementById('accountsInvolved').value;
+                statistic[indexToUpdate].profileActions = document.getElementById('profileActions').value;
+                statistic[indexToUpdate].accountsCoveredNonsubscriber = document.getElementById('accountsCoveredNonsubscriber').value;
+                statistic[indexToUpdate].accountsCoveredSubscriber = document.getElementById('accountsCoveredSubscriber').value;
+                statistic[indexToUpdate].accountsInvolvedNonsubscriber = document.getElementById('accountsInvolvedNonsubscriber').value;
+                statistic[indexToUpdate].accountsInvolvedSubscriber = document.getElementById('accountsInvolvedSubscriber').value;
+                statistic[indexToUpdate].shows = document.getElementById('shows').value;
+                statistic[indexToUpdate].interactionsHistory = document.getElementById('interactionsHistory').value;
+                statistic[indexToUpdate].likes = document.getElementById('likes').value;
+                statistic[indexToUpdate].answers = document.getElementById('answers').value;
+                statistic[indexToUpdate].reposts = document.getElementById('reposts').value;
+                statistic[indexToUpdate].clickStickers = document.getElementById('clickStickers').value;
+                statistic[indexToUpdate].email = document.getElementById('email').value;
+                statistic[indexToUpdate].emailValue = document.getElementById('emailValue').value;
+                statistic[indexToUpdate].navigation = document.getElementById('navigation').value;
+                statistic[indexToUpdate].forward = document.getElementById('forward').value;
+                statistic[indexToUpdate].back = document.getElementById('back').value;
+                statistic[indexToUpdate].exits = document.getElementById('exits').value;
+                statistic[indexToUpdate].nextStory = document.getElementById('nextStory').value;
+                statistic[indexToUpdate].visitProfile = document.getElementById('visitProfile').value;
+                statistic[indexToUpdate].subscriptions = document.getElementById('subscriptions').value;
+            }
+        })
+        function loadStatistic() {
+            const curSlideId = document.querySelector('.slick-current').id
+            const indexToUpdate = statistic.findIndex(item => item.id === curSlideId);
+            if (indexToUpdate !== -1) {
+                document.getElementById('views').value = statistic[indexToUpdate].views;
+                document.getElementById('views' + statistic[indexToUpdate].id).value = statistic[indexToUpdate].views1;
+
+                document.getElementById('accountsCovered').value = statistic[indexToUpdate].accountsCovered;
+                document.getElementById('accountsCovered1').value = statistic[indexToUpdate].accountsCovered;
+                document.getElementById('accountsInvolved').value = statistic[indexToUpdate].accountsInvolved;
+                document.getElementById('accountsInvolved1').value = statistic[indexToUpdate].accountsInvolved;
+                document.getElementById('profileActions').value = statistic[indexToUpdate].profileActions;
+                document.getElementById('profileActions1').value = statistic[indexToUpdate].profileActions;
+                document.getElementById('accountsCoveredNonsubscriber').value = statistic[indexToUpdate].accountsCoveredNonsubscriber;
+                document.getElementById('accountsCoveredSubscriber').value = statistic[indexToUpdate].accountsCoveredSubscriber;
+                document.getElementById('accountsInvolvedNonsubscriber').value = statistic[indexToUpdate].accountsInvolvedNonsubscriber;
+                document.getElementById('accountsInvolvedSubscriber').value = statistic[indexToUpdate].accountsInvolvedSubscriber;
+                document.getElementById('shows').value = statistic[indexToUpdate].shows;
+                document.getElementById('interactionsHistory').value = statistic[indexToUpdate].interactionsHistory;
+                document.getElementById('likes').value = statistic[indexToUpdate].likes;
+                document.getElementById('answers').value = statistic[indexToUpdate].answers;
+                document.getElementById('reposts').value = statistic[indexToUpdate].reposts;
+                document.getElementById('clickStickers').value = statistic[indexToUpdate].clickStickers;
+                document.getElementById('email').value = statistic[indexToUpdate].email;
+                document.getElementById('emailValue').value = statistic[indexToUpdate].emailValue;
+                document.getElementById('navigation').value = statistic[indexToUpdate].navigation;
+                document.getElementById('forward').value = statistic[indexToUpdate].forward;
+                document.getElementById('back').value = statistic[indexToUpdate].back;
+                document.getElementById('exits').value = statistic[indexToUpdate].exits;
+                document.getElementById('nextStory').value = statistic[indexToUpdate].nextStory;
+                document.getElementById('visitProfile').value = statistic[indexToUpdate].visitProfile;
+                document.getElementById('subscriptions').value = statistic[indexToUpdate].subscriptions;
+                updateChart(chart, document.getElementById('accountsCoveredSubscriber'), document.getElementById('accountsCoveredNonsubscriber'), document.getElementById('accountsCovered'), document.getElementById('accountsCovered1'))
+                updateChart(chart1, document.getElementById('accountsInvolvedSubscriber'), document.getElementById('accountsInvolvedNonsubscriber'), document.getElementById('accountsInvolved'), document.getElementById('accountsInvolved1'))
+            }
+        }
+    </script>
+</body>
+
+</html>
