@@ -366,9 +366,10 @@
             const accountsInput = document.getElementById(accountsInputId);
             const accountsInput1 = document.getElementById(accountsInputId + '1');
             function getDataFromInputs() {
+                console.log(nonsubscriberInput.value);
                 return [
-                    Number(nonsubscriberInput.value) || 0,
-                    Number(subscriberInput.value) || 1
+                    Number(nonsubscriberInput.value.replace(/\s/g, "")) || 0,
+                    Number(subscriberInput.value.replace(/\s/g, "")) || 1
                 ];
             }
             const data = {
@@ -406,9 +407,10 @@
         }
         function updateChart(myChart, subscriberInput, nonsubscriberInput, accountsInput, accountsInput1) {
             function getDataFromInputs() {
+                console.log(nonsubscriberInput.value);
                 return [
-                    Number(nonsubscriberInput.value) || 0,
-                    Number(subscriberInput.value) || 1
+                    Number(nonsubscriberInput.value.replace(/\s/g, "")) || 0,
+                    Number(subscriberInput.value.replace(/\s/g, "")) || 1
                 ];
             }
 
@@ -416,13 +418,16 @@
             myChart.update();
 
             if (subscriberInput.value && nonsubscriberInput.value) {
-                accountsInput.value = Number(subscriberInput.value.replace(/\s/g, "")) + Number(nonsubscriberInput.value.replace(/\s/g, ""));
-                accountsInput1.value = Number(subscriberInput.value.replace(/\s/g, "")) + Number(nonsubscriberInput.value.replace(/\s/g, ""));
+                const inputValue=Number(subscriberInput.value.replace(/\s/g, "")) + Number(nonsubscriberInput.value.replace(/\s/g, ""));
+                const formattedValue = inputValue.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+                accountsInput.value =formattedValue;
+                accountsInput1.value =formattedValue;
             }
         }
         createAndInitChart('myChart', 'accountsCoveredSubscriber', 'accountsCoveredNonsubscriber', "accountsCovered");
         createAndInitChart('myChart1', 'accountsInvolvedSubscriber', 'accountsInvolvedNonsubscriber', "accountsInvolved");
         document.getElementById('profileActions').addEventListener('input', () => {
+            
             document.getElementById('profileActions1').value = document.getElementById('profileActions').value;
         })
         document.getElementById('views').addEventListener('input', () => {

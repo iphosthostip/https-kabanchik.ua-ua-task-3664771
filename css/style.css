@@ -1,5 +1,5 @@
 input {
-  width: 70px;
+  width: 80px;
   border: none;
   letter-spacing: normal;
   line-height: normal;
@@ -53,6 +53,8 @@ input::placeholder {
   color: white;
   letter-spacing: normal;
   width: 10px;
+  -webkit-text-fill-color: white;
+  opacity: 1;
   margin-left: 3px;
 }
 
