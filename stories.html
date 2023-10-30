@@ -46,7 +46,7 @@
             <div>
                 <img id="save" src="img/chart.jpg" alt="" style="width: 25px;height: 25px;">
                 <img src="img/eay.png" alt="" style="width: 20px;height: 20px;">
-                <input id="views" type="text" class="instbold" placeholder="--">
+                <input id="views" type="text" class="instbold" placeholder="--" style="margin-left: 5px;">
             </div>
             <img src="img/trash.png" alt="" style="width: 20px;height: 20px;">
         </div>
@@ -95,14 +95,14 @@
             </div>
             <div class="chart-container">
                 <div class="centered-text">
-                    <input type="text" class="instbold instnormal" disabled id="accountsCovered1" disabled
-                        placeholder="--" style="font-size: 22px;">
+                    <input type="text" class="instbold" disabled id="accountsCovered1" disabled placeholder="--"
+                        style="font-size: 20px;">
                     <span class="chartp">Охваченные аккаунты</span>
                 </div>
                 <div class="bottom-row">
                     <div class="justend">
-                        <input type="text" class="instbold instnormal" id="accountsCoveredSubscriber" placeholder="--">
-                        <div class="dot-container"><span class="chartp">Подписчики</span>
+                        <input type="text" class="instbold " id="accountsCoveredSubscriber" placeholder="--" style="font-size: 16px;">
+                        <div class="dot-container"><span class="chartp" style="font-size: 14px;">Подписчики</span>
                             <div class="dot blue"></div>
                         </div>
                     </div>
@@ -114,18 +114,18 @@
                         </div>
                     </div>
                     <div class="juststart">
-                        <input type="text" class="instbold instnormal" id="accountsCoveredNonsubscriber"
-                            placeholder="--">
+                        <input type="text" class="instbold " id="accountsCoveredNonsubscriber" placeholder="--" style="font-size: 16px;">
                         <div class="dot-container">
-                            <div class="dot darkblue"></div><span class="chartp">Не подписчики</span>
+                            <div class="dot darkblue"></div><span class="chartp"
+                                style="text-align: start;line-height: 16px;font-size: 14px;">Не подписчик<br>и</span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="shows">
-            <p class="instbold" style="font-size: 24px;">Показы</p>
-            <input type="text" class="instbold" id="shows" placeholder="--" style="font-size: 22px;">
+            <p class="instbold" style="font-size: 22px;">Показы</p>
+            <input type="text" class="instbold" id="shows" placeholder="--" style="font-size: 20px;">
         </div>
         <div class="involvement">
             <div class="head">
@@ -144,13 +144,13 @@
             </div>
             <div class="chart-container">
                 <div class="centered-text">
-                    <input type="text" class="instbold" id="accountsInvolved1" placeholder="--" disabled>
+                    <input type="text" class="instbold" id="accountsInvolved1" placeholder="--" disabled style="font-size: 20px;">
                     <span class="chartp">Вовлеченные аккаунты</span>
                 </div>
                 <div class="bottom-row">
                     <div class="justend">
-                        <input type="text" class="instbold instnormal" id="accountsInvolvedSubscriber" placeholder="--">
-                        <div class="dot-container"><span class="chartp">Подписчики</span>
+                        <input type="text" class="instbold" id="accountsInvolvedSubscriber" placeholder="--" style="font-size: 16px;">
+                        <div class="dot-container"><span class="chartp" style="font-size: 14px;">Подписчики</span>
                             <div class="dot blue"></div>
                         </div>
                     </div>
@@ -162,10 +162,10 @@
                         </div>
                     </div>
                     <div class="juststart">
-                        <input type="text" class="instbold instnormal" id="accountsInvolvedNonsubscriber"
-                            placeholder="--">
+                        <input type="text" class="instbold " id="accountsInvolvedNonsubscriber" placeholder="--" style="font-size: 16px;">
                         <div class="dot-container">
-                            <div class="dot darkblue"></div><span class="chartp">Не подписчики</span>
+                            <div class="dot darkblue"></div><span class="chartp"
+                                style="text-align: start;line-height: 16px;font-size: 14px;">Не подписчик<br>и</span>
                         </div>
                     </div>
                 </div>
@@ -418,16 +418,16 @@
             myChart.update();
 
             if (subscriberInput.value && nonsubscriberInput.value) {
-                const inputValue=Number(subscriberInput.value.replace(/\s/g, "")) + Number(nonsubscriberInput.value.replace(/\s/g, ""));
+                const inputValue = Number(subscriberInput.value.replace(/\s/g, "")) + Number(nonsubscriberInput.value.replace(/\s/g, ""));
                 const formattedValue = inputValue.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
-                accountsInput.value =formattedValue;
-                accountsInput1.value =formattedValue;
+                accountsInput.value = formattedValue;
+                accountsInput1.value = formattedValue;
             }
         }
         createAndInitChart('myChart', 'accountsCoveredSubscriber', 'accountsCoveredNonsubscriber', "accountsCovered");
         createAndInitChart('myChart1', 'accountsInvolvedSubscriber', 'accountsInvolvedNonsubscriber', "accountsInvolved");
         document.getElementById('profileActions').addEventListener('input', () => {
-            
+
             document.getElementById('profileActions1').value = document.getElementById('profileActions').value;
         })
         document.getElementById('views').addEventListener('input', () => {
