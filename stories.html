@@ -366,7 +366,6 @@
             const accountsInput = document.getElementById(accountsInputId);
             const accountsInput1 = document.getElementById(accountsInputId + '1');
             function getDataFromInputs() {
-                console.log(nonsubscriberInput.value);
                 return [
                     Number(nonsubscriberInput.value.replace(/\s/g, "")) || 0,
                     Number(subscriberInput.value.replace(/\s/g, "")) || 1
@@ -407,7 +406,6 @@
         }
         function updateChart(myChart, subscriberInput, nonsubscriberInput, accountsInput, accountsInput1) {
             function getDataFromInputs() {
-                console.log(nonsubscriberInput.value);
                 return [
                     Number(nonsubscriberInput.value.replace(/\s/g, "")) || 0,
                     Number(subscriberInput.value.replace(/\s/g, "")) || 1
