@@ -1,31 +1,3 @@
-@font-face {
-  font-family: "InstagramSansCYR";
-  src: url("../fonts/InstagramSansCYR-Bold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "InstagramSansCYRRegular";
-  src: url("../fonts/InstagramSansCYR-Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "InstagramSansCYR";
-  src: url("../fonts/InstagramSansCYR-Bold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "InstagramSansCYRRegular";
-  src: url("../fonts/InstagramSansCYR-Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
 input {
   width: 70px;
   border: none;
@@ -43,8 +15,6 @@ input::placeholder {
 }
 
 .stories {
-  font-family: "InstagramSansCYRRegular";
-  font-weight: normal;
   font-style: normal;
   letter-spacing: normal;
 }
@@ -78,13 +48,12 @@ input::placeholder {
 }
 
 .stories #slider1 .slider .likesInput {
-  margin-left: 3px;
   background-color: transparent;
   font-size: 14px;
   color: white;
   letter-spacing: normal;
   width: 10px;
-  text-align: center;
+  margin-left: 3px;
 }
 
 .stories #slider1 img {
@@ -120,7 +89,7 @@ input::placeholder {
 
 .stories #slider1 .slick-current .likes {
   bottom: 22px;
-  left: 0;
+  left: 3px;
   width: 67.5px;
 }
 
@@ -136,10 +105,13 @@ input::placeholder {
 }
 
 .stories .statistic .instbold {
-  font-family: "InstagramSansCYR";
-  font-weight: bold;
+  font-weight: 800;
   font-style: normal;
-  font-size: 20px;
+  font-size: 18px;
+}
+
+.stories .statistic .instnormal {
+  font-weight: 600;
 }
 
 .stories .statistic .btns {
@@ -164,7 +136,6 @@ input::placeholder {
   display: grid;
   grid-template-rows: 1fr 1fr 1fr 1fr;
   row-gap: 10px;
-  font-weight: 600;
   border-bottom: solid 5px #efefef;
 }
 
@@ -309,13 +280,23 @@ input::placeholder {
   justify-content: space-between;
 }
 
-.stories .statistic .stickers > div input[type=text] {
+.stories .statistic .stickers > div .tas {
   width: 150px;
   text-align: start;
 }
 
 .stories .statistic .rows3 {
   grid-template-rows: 1fr 1fr 1fr;
+}
+
+.imginputfonts {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.chartp {
+  color: rgb(199, 199, 199);
 }
 
 * {
@@ -349,7 +330,7 @@ button {
   text-align: inherit;
   outline: none;
   cursor: pointer;
-  font-family: "InstagramSansCYR";
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: bold;
   font-style: normal;
   color: black;
@@ -371,10 +352,9 @@ a:hover {
 body {
   width: 100vw;
   height: 100vh;
-  font-family: "InstagramSansCYR";
-  font-weight: bold;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 600;
   font-style: normal;
-  letter-spacing: -1px;
 }
 
 .container {

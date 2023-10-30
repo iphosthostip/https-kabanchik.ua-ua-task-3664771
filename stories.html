@@ -46,7 +46,7 @@
             <div>
                 <img id="save" src="img/chart.jpg" alt="" style="width: 25px;height: 25px;">
                 <img src="img/eay.png" alt="" style="width: 20px;height: 20px;">
-                <input id="views" type="number" class="instbold" placeholder="--">
+                <input id="views" type="text" class="instbold" placeholder="--">
             </div>
             <img src="img/trash.png" alt="" style="width: 20px;height: 20px;">
         </div>
@@ -67,15 +67,15 @@
             </div>
             <div>
                 <p>Охваченные аккаунты</p>
-                <input id="accountsCovered" disabled type="number" class="instbold" placeholder="--">
+                <input id="accountsCovered" disabled type="text" class="instbold instnormal" placeholder="--">
             </div>
             <div>
                 <p>Вовлеченые аккаунты</p>
-                <input id="accountsInvolved" disabled type="number" class="instbold" placeholder="--">
+                <input id="accountsInvolved" disabled type="text" class="instbold instnormal" placeholder="--">
             </div>
             <div>
                 <p>Действия в профиле</p>
-                <input id="profileActions" type="number" class="instbold" placeholder="--">
+                <input id="profileActions" type="text" class="instbold instnormal" placeholder="--">
             </div>
         </div>
         <div class="coverage">
@@ -95,13 +95,14 @@
             </div>
             <div class="chart-container">
                 <div class="centered-text">
-                    <input type="number" class="instbold" disabled id="accountsCovered1" disabled placeholder="--">
-                    <span>Охваченные аккаунты</span>
+                    <input type="text" class="instbold instnormal" disabled id="accountsCovered1" disabled
+                        placeholder="--" style="font-size: 22px;">
+                    <span class="chartp">Охваченные аккаунты</span>
                 </div>
                 <div class="bottom-row">
                     <div class="justend">
-                        <input type="number" class="instbold" id="accountsCoveredSubscriber" placeholder="--">
-                        <div class="dot-container"><span>Подписчики</span>
+                        <input type="text" class="instbold instnormal" id="accountsCoveredSubscriber" placeholder="--">
+                        <div class="dot-container"><span class="chartp">Подписчики</span>
                             <div class="dot blue"></div>
                         </div>
                     </div>
@@ -113,9 +114,10 @@
                         </div>
                     </div>
                     <div class="juststart">
-                        <input type="number" class="instbold" id="accountsCoveredNonsubscriber" placeholder="--">
+                        <input type="text" class="instbold instnormal" id="accountsCoveredNonsubscriber"
+                            placeholder="--">
                         <div class="dot-container">
-                            <div class="dot darkblue"></div><span>Не подписчики</span>
+                            <div class="dot darkblue"></div><span class="chartp">Не подписчики</span>
                         </div>
                     </div>
                 </div>
@@ -123,7 +125,7 @@
         </div>
         <div class="shows">
             <p class="instbold" style="font-size: 24px;">Показы</p>
-            <input type="number" class="instbold" id="shows" placeholder="--" style="font-size: 22px;">
+            <input type="text" class="instbold" id="shows" placeholder="--" style="font-size: 22px;">
         </div>
         <div class="involvement">
             <div class="head">
@@ -142,13 +144,13 @@
             </div>
             <div class="chart-container">
                 <div class="centered-text">
-                    <input type="number" class="instbold" id="accountsInvolved1" placeholder="--" disabled>
-                    <span>Вовлеченные аккаунты</span>
+                    <input type="text" class="instbold" id="accountsInvolved1" placeholder="--" disabled>
+                    <span class="chartp">Вовлеченные аккаунты</span>
                 </div>
                 <div class="bottom-row">
                     <div class="justend">
-                        <input type="number" class="instbold" id="accountsInvolvedSubscriber" placeholder="--">
-                        <div class="dot-container"><span>Подписчики</span>
+                        <input type="text" class="instbold instnormal" id="accountsInvolvedSubscriber" placeholder="--">
+                        <div class="dot-container"><span class="chartp">Подписчики</span>
                             <div class="dot blue"></div>
                         </div>
                     </div>
@@ -160,9 +162,10 @@
                         </div>
                     </div>
                     <div class="juststart">
-                        <input type="number" class="instbold" id="accountsInvolvedNonsubscriber" placeholder="--">
+                        <input type="text" class="instbold instnormal" id="accountsInvolvedNonsubscriber"
+                            placeholder="--">
                         <div class="dot-container">
-                            <div class="dot darkblue"></div><span>Не подписчики</span>
+                            <div class="dot darkblue"></div><span class="chartp">Не подписчики</span>
                         </div>
                     </div>
                 </div>
@@ -170,53 +173,53 @@
         </div>
         <div class="interaction">
             <div class="head">
-                <span class="instbold" style="font-size: 20px;">Взаимодействия с историей</span>
-                <input type="number" id="interactionsHistory" class="instbold" placeholder="--"
-                    style="font-size: 22px;">
+                <span class="instbold" style="font-size: 18px;">Взаимодействия с историей</span>
+                <input type="text" id="interactionsHistory" class="instbold" placeholder="--" style="font-size: 22px;">
             </div>
             <div>
                 <p>Отметки "Нравится"</p>
-                <input id="likes" type="number" class="instbold" placeholder="--">
+                <input id="likes" type="text" class="instbold instnormal" placeholder="--">
             </div>
             <div>
                 <p>Ответы</p>
-                <input id="answers" type="number" class="instbold" placeholder="--">
+                <input id="answers" type="text" class="instbold instnormal" placeholder="--">
             </div>
             <div>
                 <p>Репосты</p>
-                <input id="reposts" type="number" class="instbold" placeholder="--">
+                <input id="reposts" type="text" class="instbold instnormal" placeholder="--">
             </div>
         </div>
         <div class="stickers">
             <div>
                 <p class="instbold" style="font-size: 24px;">Нажатия на стикеры</p>
-                <input id="clickStickers" type="number" class="instbold" placeholder="--">
+                <input id="clickStickers" type="text" class="instbold" placeholder="--">
             </div>
             <div>
-                <input id="email" type="text" placeholder="@herbal_craft" style="font-size: 16px;">
-                <input id="emailValue" type="number" placeholder="--" style="font-size: 16px;">
+                <input id="email" class="instbold instnormal tas" type="text" placeholder="@herbal_craft"
+                    style="font-size: 16px;">
+                <input id="emailValue" type="text" placeholder="--" class="instbold instnormal">
             </div>
         </div>
         <div class="interaction">
             <div class="head">
                 <span class="instbold" style="font-size: 22px;">Навигация</span>
-                <input id="navigation" type="number" class="instbold" placeholder="--" style="font-size: 22px;">
+                <input id="navigation" type="text" class="instbold" placeholder="--" style="font-size: 22px;">
             </div>
             <div>
                 <p>Вперед</p>
-                <input id="forward" type="number" class="instbold" placeholder="--">
+                <input id="forward" type="text" class="instbold instnormal" placeholder="--">
             </div>
             <div>
                 <p>Назад</p>
-                <input id="back" type="number" class="instbold" placeholder="--">
+                <input id="back" type="text" class="instbold instnormal" placeholder="--">
             </div>
             <div>
                 <p>Выходы</p>
-                <input id="exits" type="number" class="instbold" placeholder="--">
+                <input id="exits" type="text" class="instbold instnormal" placeholder="--">
             </div>
             <div>
                 <p>Следующая история</p>
-                <input id="nextStory" type="number" class="instbold" placeholder="--">
+                <input id="nextStory" type="text" class="instbold instnormal" placeholder="--">
             </div>
         </div>
         <div class="interaction rows3">
@@ -233,16 +236,16 @@
                         <polyline fill="none" points="10.569 11.05 12 11.05 12 16.777" stroke="currentColor"
                             stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polyline>
                     </svg></div>
-                <input type="number" class="instbold" disabled id="profileActions1" placeholder="--"
+                <input type="text" class="instbold" disabled id="profileActions1" placeholder="--"
                     style="font-size: 22px;">
             </div>
             <div>
                 <p>Посещение профиля</p>
-                <input id="visitProfile" type="number" class="instbold" placeholder="--">
+                <input id="visitProfile" type="text" class="instbold instnormal" placeholder="--">
             </div>
             <div>
                 <p>Подписки</p>
-                <input id="subscriptions" type="number" class="instbold" placeholder="--">
+                <input id="subscriptions" type="text" class="instbold instnormal" placeholder="--">
             </div>
         </div>
     </div>
@@ -302,17 +305,22 @@
                         imgInput.src = 'img/eayWhite.png';
                         imgInput.style = 'height:10px;width:10px;';
                         input.classList.add('likesInput')
+                        input.classList.add('imginputfonts')
+                        input.classList.add('instbold')
+                        input.classList.add('instnormal')
                         input.id = 'views' + div.id;
                         input.addEventListener('input', function () {
+                            // if (input.value[input.value.length - 1] !== ' ') {
                             const inputText = input.value;
                             const inputLength = inputText.length;
-                            const maxInputWidth = 40;
-                            const inputWidth = Math.min(inputLength * 8, maxInputWidth);
+                            const maxInputWidth = 45;
+                            const inputWidth = Math.min(inputLength * 9, maxInputWidth);
                             input.style.width = inputWidth + 'px';
+                            // }
                         });
                         divInput.classList.add('likes')
-                        input.type = 'number';
-                        input.placeholder = '--';
+                        input.type = 'text';
+                        input.disabled = true;
                         divInput.appendChild(imgInput);
                         divInput.appendChild(input);
                         div.appendChild(img);
@@ -366,7 +374,7 @@
             const data = {
                 datasets: [{
                     data: getDataFromInputs(),
-                    backgroundColor: ['rgb(0, 55, 107)','rgb(0, 149, 246)'],
+                    backgroundColor: ['rgb(0, 55, 107)', 'rgb(0, 149, 246)'],
                     borderColor: ['#ffffff', '#ffffff'],
                     borderWidth: 1
                 }],
@@ -408,8 +416,8 @@
             myChart.update();
 
             if (subscriberInput.value && nonsubscriberInput.value) {
-                accountsInput.value = Number(subscriberInput.value) + Number(nonsubscriberInput.value);
-                accountsInput1.value = Number(subscriberInput.value) + Number(nonsubscriberInput.value);
+                accountsInput.value = Number(subscriberInput.value.replace(/\s/g, "")) + Number(nonsubscriberInput.value.replace(/\s/g, ""));
+                accountsInput1.value = Number(subscriberInput.value.replace(/\s/g, "")) + Number(nonsubscriberInput.value.replace(/\s/g, ""));
             }
         }
         createAndInitChart('myChart', 'accountsCoveredSubscriber', 'accountsCoveredNonsubscriber', "accountsCovered");
